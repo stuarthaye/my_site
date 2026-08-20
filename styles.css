@@ -27,33 +27,6 @@ thead th {
   border-top: 1px solid currentColor;
 }
 
-.table-scroll {
-  max-height: 10rem;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: currentColor transparent;
-}
-
-.table-scroll::-webkit-scrollbar {
-  width: 6px;
-}
-
-.table-scroll::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.table-scroll::-webkit-scrollbar-thumb {
-  background: currentColor;
-  border-radius: 0;
-}
-
-.table-scroll th {
-  position: sticky;
-  top: 0;
-  background: white;
-  background-clip: padding-box;
-}
-
 @media (max-width: 700px) {
   body {
     margin: 8px;
