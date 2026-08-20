@@ -7,158 +7,180 @@
     <title>Stuart Hayes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <header>
       <h1>stuart hayes</h1>
-      <p>engineer who deals with data. i make pipelines, data models, analytics dashboards. i know a lot about semiconductor manufacturing data.</p>
+      <p>
+        engineer who deals with data. i make pipelines, data models, analytics
+        dashboards. i know a lot about semiconductor manufacturing data.
+      </p>
       <a href="https://github.com/stuarthaye">github</a>
       <a href="https://www.linkedin.com/in/stuart-h-6bb7911ba/">linkedin</a>
     </header>
 
     <main>
-      <section id="experience" aria-labelledby="experience-heading">
-        <h2 id="experience-heading">experience</h2>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">where</th>
-              <th scope="col">what</th>
-              <th scope="col">when</th>
-              <th scope="">type</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>microchip technology, inc.</td>
-              <td>software engineer, data</td>
-              <td>2023 - now</td>
-              <td>work</td>
-            </tr>
-            <tr>
-              <td>university of oregon</td>
-              <td>B.S. in computer science</td>
-              <td>2019 - 2023</td>
-              <td>school</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+      <section id="database">
+        <div class="database_grid">
+          <input
+            type="radio"
+            name="portfolio-section"
+            id="experience"
+            checked
+          />
+          <input type="radio" name="portfolio-section" id="skills" />
+          <input type="radio" name="portfolio-section" id="projects" />
 
-      <section id="skills" aria-labelledby="skills-heading">
-        <h2 id="skills-heading">skills</h2>
-        <div >
-          <table>
-          <thead>
-            <tr>
-              <th scope="col">skill</th>
-              <th scope="col">type</th>
-              <th scope="col">level (out of 5 *)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Python</td>
-              <td>language</td>
-              <td>* * * * * </td>
-            </tr>
-            <tr>
-              <td>SQL</td>
-              <td>language</td>
-              <td>* * * * * </td>
-            </tr>
-            <tr>
-              <td>TypeScript & JavaScript</td>
-              <td>language</td>
-              <td>* * * * </td>
-            </tr>
-            <tr>
-              <td>C & C++</td>
-              <td>language</td>
-              <td>* * * * </td>
-            </tr>
-            <tr>
-              <td>Perl</td>
-              <td>language</td>
-              <td>* * * </td>
-            </tr>
-            <tr>
-              <td>FastAPI</td>
-              <td>library</td>
-              <td>* * * * *</td>
-            </tr>
-            <tr>
-              <td>SQLMesh</td>
-              <td>library</td>
-              <td>* * * * *</td>
-            </tr>
-            <tr>
-              <td>Dagster</td>
-              <td>library</td>
-              <td>* * * * *</td>
-            </tr>
-            <tr>
-              <td>OracleDB</td>
-              <td>database</td>
-              <td>* * * * *</td>
-            </tr>
-            <tr>
-              <td>PostgreSQL</td>
-              <td>database</td>
-              <td>* * * * *</td>
-            </tr>
-            <tr>
-              <td>DuckDB</td>
-              <td>database</td>
-              <td>* * * * *</td>
-            </tr>
-            <tr>
-              <td>polars & pandas</td>
-              <td>library</td>
-              <td>* * * * *</td>
-            </tr>
-            <tr>
-              <td>streamlit</td>
-              <td>library</td>
-              <td>* * * * *</td>
-            </tr>
-            <tr>
-              <td>React</td>
-              <td>library</td>
-              <td>* * * *</td>
-            </tr>
-          </tbody>
-          </table>
+          <div class="sidebar">
+            <span class="sidebar-title">catalog</span>
+            <p>main</p>
+            <div class="sidebar-options">
+              <label for="experience"> |- <span>experience</span> </label>
+              <label for="skills"> |- <span>skills</span> </label>
+              <label for="projects"> |- <span>projects</span> </label>
+            </div>
+          </div>
+
+          <!-- Database Viewer -->
+          <div class="database_viewer">
+            <div class="viewer-content experience-content">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">where</th>
+                    <th scope="col">what</th>
+                    <th scope="col">when</th>
+                    <th scope="">type</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>microchip technology, inc.</td>
+                    <td>software engineer, data</td>
+                    <td>2023 - now</td>
+                    <td>work</td>
+                  </tr>
+                  <tr>
+                    <td>university of oregon</td>
+                    <td>B.S. in computer science</td>
+                    <td>2019 - 2023</td>
+                    <td>school</td>
+                  </tr>
+                  <tr class="last_row">
+                    <td colspan="4">...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="viewer-content skills-content">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">skill</th>
+                    <th scope="col">type</th>
+                    <th scope="col">level</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Python</td>
+                    <td>language</td>
+                    <td>* * * * *</td>
+                  </tr>
+                  <tr>
+                    <td>SQL</td>
+                    <td>language</td>
+                    <td>* * * * *</td>
+                  </tr>
+                  <tr>
+                    <td>TypeScript & JavaScript</td>
+                    <td>language</td>
+                    <td>* * * *</td>
+                  </tr>
+                  <tr>
+                    <td>C & C++</td>
+                    <td>language</td>
+                    <td>* * * *</td>
+                  </tr>
+                  <tr>
+                    <td>Perl</td>
+                    <td>language</td>
+                    <td>* * *</td>
+                  </tr>
+                  <tr>
+                    <td>FastAPI</td>
+                    <td>backend</td>
+                    <td>* * * * *</td>
+                  </tr>
+                  <tr>
+                    <td>SQLMesh</td>
+                    <td>data</td>
+                    <td>* * * * *</td>
+                  </tr>
+                  <tr>
+                    <td>Dagster</td>
+                    <td>data</td>
+                    <td>* * * * *</td>
+                  </tr>
+                  <tr>
+                    <td>databases (DuckDB, PostgreSQL, Oracle)</td>
+                    <td>data</td>
+                    <td>* * * * *</td>
+                  </tr>
+                  <tr>
+                    <td>polars & pandas</td>
+                    <td>data</td>
+                    <td>* * * * *</td>
+                  </tr>
+                  <tr>
+                    <td>streamlit</td>
+                    <td>data / frontend</td>
+                    <td>* * * * *</td>
+                  </tr>
+                  <tr>
+                    <td>React</td>
+                    <td>frontend</td>
+                    <td>* * * *</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="viewer-content projects-content">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">project</th>
+                    <th scope="col">description</th>
+                    <th scope="col">tools</th>
+                    <th scope="col">link</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>data projector</td>
+                    <td>
+                      a data transformation tool in the vein of SQLMesh, dbt but
+                      even more python focused. right now only works on duckdb.
+                    </td>
+                    <td>Python, PyDantic</td>
+                    <td>working on it</td>
+                  </tr>
+                  <tr class="last_row">
+                    <td colspan="4">...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
-      </section>
-
-      <section id="projects" aria-labelledby="projects-heading">
-        <h2 id="projects-heading">projects</h2>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">project</th>
-              <th scope="col">description</th>
-              <th scope="col">tools</th>
-              <th scope="col">link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>data projector</td>
-              <td>a data transformation tool in the vein of SQLMesh, dbt but even more python focused. right now only works on duckdb.</td>
-              <td>Python, PyDantic</td>
-              <td>working on it</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section id="goodbye" aria-labelledby="goodbye-heading">
-        <h2 id="goodbye-heading">that's all</h2>
-        <p>thanks for visiting!</p>
       </section>
     </main>
   </body>

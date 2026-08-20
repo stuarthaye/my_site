@@ -3,32 +3,186 @@ body {
   font-family: "IBM Plex Mono", monospace;
 }
 
+main {
+  margin-top: 1.5rem;
+}
+
+.database_grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+/* Hide the radio buttons */
+
+.database_grid>input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Sidebar */
+
+.sidebar {
+  position: relative;
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+.sidebar-title {
+  position: absolute;
+  top: -0.65em;
+  left: 30%;
+  transform: translateX(-50%);
+  padding: 0 0.5rem;
+  background-color: white;
+}
+
+/* Sidebar options */
+
+.sidebar-options label {
+  display: block;
+  margin: 1em 0;
+  cursor: pointer;
+}
+
+.sidebar-options label span {
+  padding: 0;
+}
+
+/* Highlight selected option */
+
+#experience:checked~.sidebar label[for="experience"] span,
+#skills:checked~.sidebar label[for="skills"] span,
+#projects:checked~.sidebar label[for="projects"] span {
+  font-weight: bold;
+}
+
+/* Keyboard focus */
+
+#experience:focus-visible~.sidebar label[for="experience"],
+#skills:focus-visible~.sidebar label[for="skills"],
+#projects:focus-visible~.sidebar label[for="projects"] {
+  outline: 1px solid black;
+  outline-offset: 2px;
+}
+
+/* Database viewer */
+
+.database_viewer {
+  border: 2px solid black;
+  border-left: 0;
+  height: 460px;
+  overflow-y: auto;
+}
+
+/* Data viewer scrollbar */
+
+.database_viewer::-webkit-scrollbar {
+  width: 10px;
+}
+
+.database_viewer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.database_viewer::-webkit-scrollbar-thumb {
+  background: black;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 0;
+}
+
+/* Hide viewer content by default */
+
+.viewer-content {
+  display: none;
+}
+
+/* Conditionally display viewer content by selection */
+
+#experience:checked~.database_viewer .experience-content {
+  display: block;
+}
+
+#skills:checked~.database_viewer .skills-content {
+  display: block;
+}
+
+#projects:checked~.database_viewer .projects-content {
+  display: block;
+}
+
+/* Tables */
+
 table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
+  border-collapse: collapse;
+  border-style: hidden;
 }
 
 th,
 td {
+  box-sizing: border-box;
   padding: 0.5rem;
-  border-right: 1px solid currentColor;
-  border-bottom: 1px solid currentColor;
+  border: 2px dashed black;
   text-align: left;
   vertical-align: top;
 }
 
-th:first-child,
-td:first-child {
-  border-left: 1px solid currentColor;
+/* Sticky header */
+
+th {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1;
 }
+
+/* Remove normal borders from sticky header */
 
 thead th {
-  border-top: 1px solid currentColor;
+  border: 0;
 }
 
-@media (max-width: 700px) {
-  body {
-    margin: 8px;
-  }
+/* Sticky header bottom border */
+
+thead th::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: black;
+  pointer-events: none;
+}
+
+/* Sticky header column separators */
+
+thead th+th::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1px;
+  width: 2px;
+  background: black;
+  pointer-events: none;
+}
+
+/* No top border on header row */
+
+thead tr:first-child th {
+  border-top: 0;
+}
+
+/* Prevent duplicate border below header */
+
+tbody tr:first-child td {
+  border-top: 0;
+}
+
+/* Final row */
+
+.last_row td {
+  border-bottom: 1px solid black;
 }
