@@ -186,3 +186,71 @@ tbody tr:first-child td {
 .last_row td {
   border-bottom: 1px solid black;
 }
+
+/* Dark mode */
+
+@media (prefers-color-scheme: dark) {
+
+  body {
+    background: black;
+    color: white;
+  }
+
+  .sidebar {
+    border-color: white;
+  }
+
+  .sidebar-title {
+    background-color: black;
+    color: white;
+  }
+
+  .database_viewer {
+    border-color: white;
+  }
+
+  .database_viewer::-webkit-scrollbar-thumb {
+    background: white;
+  }
+
+  th,
+  td {
+    border-color: white;
+  }
+
+  th {
+    background: black;
+  }
+
+  thead th::after {
+    background: white;
+  }
+
+  thead th+th::before {
+    background: white;
+  }
+
+  .last_row td {
+    border-bottom-color: white;
+  }
+
+  a {
+    color: white;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 3px;
+  }
+
+  a:visited {
+    color: white;
+  }
+
+  a:hover {
+    color: #ccc;
+    text-decoration-style: solid;
+  }
+
+  a:active {
+    color: white;
+  }
+}
